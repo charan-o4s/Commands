@@ -100,7 +100,7 @@ run mongo locally through docker:
 ````
 $ docker pull mongo  #get image
 
-$ docker run --name local-mongo -d mongo:latest  # run docker container and copy container ID
+$ docker run --network=host --name localhost-mongo -d mongo:latest  # run docker container on localhost network and copy container ID
 
 $ docker ps # verify the container is running 
 
@@ -111,10 +111,6 @@ $ mongo # open mongo shell
 
 ````
 
-open a new terminal and expose docker container port as a process
-```
-$ docker run p 27017:27017 
-```
 
 connect to the db via gui (compass) with the uri below
 
@@ -122,16 +118,19 @@ connect to the db via gui (compass) with the uri below
 mongodb://localhost:27017
 ```
 
+
 ### Run the packages in the clients repo
 
+create a ``.env`` file inside ``mark-console-ui``
+```
+VUE_APP_IS_DUMMY=false
+VUE_APP_API_URL=http://localhost:51988
 
------------------------------------------------
+```
 
+build and run modules using 
+```
+npm i
+npm run dev (or) npm run serve
 
-Modules
-daemon-client
-label-printer-backend
-label-printer-UI
-uid-manager
-uidlapp
-uidlapp-client
+```
