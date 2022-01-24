@@ -117,7 +117,10 @@ connect to the db via gui (compass) with the uri below
 ```
 mongodb://localhost:27017
 ```
-
+### Clone the git repo 
+```
+$ git clone -b 'master-mark' git@github.com:original4sure/clients.git
+```
 
 ### Run the packages in the clients repo
 
