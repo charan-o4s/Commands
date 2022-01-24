@@ -2,7 +2,6 @@
 
 ## Prerequisites:
 - VPN connected
-- cloned git repo: https://github.com/original4sure/clients (branch : master-mark)
 - dev tools installed( vs code, git, node 10.16.0, npm, docker)
 
 ### O4S config
