@@ -1,7 +1,6 @@
 # Setup Steps for running Locally
 
 ## Prerequisites:
-- VPN connected
 - dev tools installed( vs code, git, node 10.16.0, npm, docker)
 
 ### O4S config
