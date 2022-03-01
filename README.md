@@ -135,9 +135,38 @@ npm i
 npm run dev (or) npm run serve
 
 ```
-### post a curl command to login to facility
+### start uid-manager
+```
+cd uid-manager && npm i && npm run dev
+```
+
+### post a curl login to facility
 
 ```
 curl -X POST http://localhost:8080/authenticate -d '{"username": "+919650031171", "password": "moneyplant"}' -H "Content-Type: application/json"
+
+```
+
+### start mark-console-ui & login with above credentials
+```
+npm i && npm run serve
+```
+### create a mock-scanner & component group in db --> UidManager.Config.componentGroups
+
+```
+{
+    "name": "autolapp_test",
+    "scanners":[{
+        "name": "scannerClient",
+        "type":"FEEDBACK",
+        "connection":"server",
+        "address": {
+            "host":"localhost",
+            "port":"9000"
+        }
+    }],
+    "printers":[{}]
+
+}
 
 ```
