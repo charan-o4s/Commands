@@ -135,3 +135,9 @@ npm i
 npm run dev (or) npm run serve
 
 ```
+### post a curl command to login to facility
+
+```
+curl -X POST http://localhost:8080/authenticate -d '{"username": "+919650031171", "password": "moneyplant"}' -H "Content-Type: application/json"
+
+```
